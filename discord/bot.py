@@ -4,6 +4,7 @@ import random
 from enum import Enum
 from collections import defaultdict, OrderedDict
 import discord.context_managers
+from io import BytesIO
 from dotenv import load_dotenv
 from discord.ext import commands
 from typing import List, DefaultDict, OrderedDict
@@ -93,6 +94,44 @@ sessions = []
 channelToSession : DefaultDict[discord.TextChannel, Session] = defaultdict(lambda : None)
 playerToSession: DefaultDict[discord.User, Session] = defaultdict(lambda: None)
 
+
+# @bot.command()
+# async def force(ctx):
+#     session = channelToSession[ctx.channel]
+#     if not session:
+#         await ctx.send("No session found for this channel.")
+#     elif session.state not in [sessionStates.FIRSTROUND, sessionStates.SECONDROUND, sessionStates.THIRDROUND]:
+#         await ctx.send("Session is not in a drafting round. Cannot force check.")
+#     elif sum(session.roundResponses.values()) >= len(session.players):
+#         session.roundResponses = defaultdict(lambda : False)
+#         for player in session.players:
+#             await player.dm_channel.send("Everyone has chosen, moving to next pick...")
+#         if not session.rotateHands():
+#             # handle end of round
+#             session.endCurrentRound()
+#             for player in session.players:
+#                 await player.dm_channel.send(f"Round complete\nPlease check back with the server's channel.\nHere's what you have so far:", embed = get_cards_from_hands(session.playerHands[player]))
+#                 if session.state == sessionStates.THIRDROUNDEND:
+#                     print(generate_ydk_from_hands(session.playerHands[player]))
+#                     await player.dm_channel.send(f"Here's a ydk with your choices:\n ```{generate_ydk_from_hands(session.playerHands[player])}```")
+#             await session.channel.send("Round complete.")
+#         else:
+#             for player in session.players:
+#                 await player.dm_channel.send(f"Please choose a hand from: {", ".join([str(x) for x in session.playerDraftHands[player]])}")
+#     else:
+#         await ctx.send("Players are still choosing.")
+
+
+# @bot.command()
+# async def state(ctx, newstate :int = None):
+#     session = channelToSession[ctx.channel]
+#     if newstate:
+#         session.state = newstate
+#         await ctx.send(f"Changed state to {session.state}")
+#     else:
+#         await ctx.send(f"Current state: {session.state}")
+
+
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user}')
@@ -117,7 +156,7 @@ async def process_recruitment(reaction : discord.Reaction, user : discord.User):
                 await session.initPlayers()
                 await channel.send("Recruitment automatically closed due to 4 players")
 
-@bot.command()
+@bot.command(aliases = ['c'])
 @commands.dm_only()
 async def choose(ctx : commands.Context, choice : str):
     user = ctx.author
@@ -144,54 +183,22 @@ async def choose(ctx : commands.Context, choice : str):
                     # handle end of round
                     session.endCurrentRound()
                     for player in session.players:
-                        await player.dm_channel.send(f"Round complete\nPlease check back with the server's channel.\nHere's what you have so far:", embed = get_cards_from_hands(session.playerHands[player], False))
+                        await player.dm_channel.send(f"Here's what you have so far:", embed = get_cards_from_hands(session.playerHands[player], False))
+                        await player.dm_channel.send(f"Round complete\nPlease check back with the server's channel.")
                         if session.state == sessionStates.THIRDROUNDEND:
                             #print(generate_ydk_from_hands(session.playerHands[player]))
-                            await player.dm_channel.send(f"Here's a ydk with your choices:\n ```\n{generate_ydk_from_hands(session.playerHands[player])}```")
-
+                            file_content = generate_ydk_from_hands(session.playerHands[player])
+                            file = BytesIO(file_content.encode('utf-8'))
+                            await player.dm_channel.send(f"Here's a ydk with your choices:", file = discord.File(file, 'cubedeck.ydk'))
                     await session.channel.send("Round complete.")
                 else:
                     for player in session.players:
                         await player.dm_channel.send(embed = get_cards_from_hands(session.playerDraftHands[player]))
 
-@bot.command()
-async def force(ctx):
-    session = channelToSession[ctx.channel]
-    if not session:
-        await ctx.send("No session found for this channel.")
-    elif session.state not in [sessionStates.FIRSTROUND, sessionStates.SECONDROUND, sessionStates.THIRDROUND]:
-        await ctx.send("Session is not in a drafting round. Cannot force check.")
-    elif sum(session.roundResponses.values()) >= len(session.players):
-        session.roundResponses = defaultdict(lambda : False)
-        for player in session.players:
-            await player.dm_channel.send("Everyone has chosen, moving to next pick...")
-        if not session.rotateHands():
-            # handle end of round
-            session.endCurrentRound()
-            for player in session.players:
-                await player.dm_channel.send(f"Round complete\nPlease check back with the server's channel.\nHere's what you have so far:", embed = get_cards_from_hands(session.playerHands[player]))
-                if session.state == sessionStates.THIRDROUNDEND:
-                    print(generate_ydk_from_hands(session.playerHands[player]))
-                    await player.dm_channel.send(f"Here's a ydk with your choices:\n ```{generate_ydk_from_hands(session.playerHands[player])}```")
-            await session.channel.send("Round complete.")
-        else:
-            for player in session.players:
-                await player.dm_channel.send(f"Please choose a hand from: {", ".join([str(x) for x in session.playerDraftHands[player]])}")
-    else:
-        await ctx.send("Players are still choosing.")
 
 
-@bot.command()
-async def state(ctx, newstate :int = None):
-    session = channelToSession[ctx.channel]
-    if newstate:
-        session.state = newstate
-        await ctx.send(f"Changed state to {session.state}")
-    else:
-        await ctx.send(f"Current state: {session.state}")
 
-
-@bot.command()
+@bot.command(aliases = ['new'])
 async def startcube(ctx):
     channel = ctx.channel
     session = channelToSession[channel]
@@ -199,12 +206,13 @@ async def startcube(ctx):
         await ctx.send("Cube in progress for this channel!")
     else:
         msg = await ctx.send("React to this message to join!")
+        await msg.add_reaction('\N{THUMBS UP SIGN}')
         newSession = Session(channel, msg)
         newSession.state = sessionStates.RECRUITING
         channelToSession[channel] = newSession
     
-@bot.command()
-async def closerec(ctx):
+@bot.command(aliases = ['close'])
+async def endrec(ctx):
     session = channelToSession[ctx.channel]
     if session.state != sessionStates.RECRUITING:
         await ctx.send("Attempted to close session not already recruiting")
@@ -216,7 +224,7 @@ async def closerec(ctx):
         await session.initPlayers()
         await ctx.send(f"Session closed! Players are {playersString}")
 
-@bot.command()
+@bot.command(aliases = ['round', 'nextround', 'r', 'next'])
 async def startround(ctx):
     session = channelToSession[ctx.channel]
     if not session:
@@ -243,8 +251,8 @@ async def startround(ctx):
             #await dm_channel.send(f"Please choose from the following hands: {", ".join([str(x) for x in session.playerDraftHands[player]])}")
             await dm_channel.send(embed = get_cards_from_hands(session.playerDraftHands[player]))
 
-@bot.command()
-async def closedraft(ctx):
+@bot.command(aliases = ['del', 'end'])
+async def endcube(ctx):
     session = channelToSession[ctx.channel]
     if not session:
         await ctx.send("No session to close!")
@@ -254,10 +262,5 @@ async def closedraft(ctx):
         for player in session.players:
             playerToSession.pop(player,None)
         await ctx.send("Session has been closed!")
-
-
-@bot.command()
-async def hello(ctx):
-    await ctx.send('Hello! I am your bot.')
 
 bot.run(TOKEN)

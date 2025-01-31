@@ -1,0 +1,301 @@
+base,hand,name,id
+0,0,Cyber Dragon,70095154
+1,0,Cyber Dragon,70095154
+2,0,Infinite Impermanence,10045474
+3,0,Cyber Dragon Infinity,10443957
+4,1,Predaplant Chlamydosundew,89181134
+5,1,Predaplant Ophrys Scorpio,35272499
+6,1,Predaponics,88069597
+7,1,Mudragon of the Swamp,54757758
+8,2,Tearlaments Merrli,74078255
+9,2,Tearlaments Merrli,74078255
+10,2,Tearlaments Scheiren,572850
+11,2,Tearlaments Kitkallos,92731385
+12,3,Cyber Dragon Core,23893227
+13,3,Cyber Dragon Drei,59281922
+14,3,Cyber Dragon Nachster,1142880
+15,3,Cyber Dragon Nova,58069384
+16,4,Tearlaments Cryme,1329620
+17,4,Tearlaments Havnis,37961969
+18,4,Paleozoic Canadia,98414735
+19,4,"Garura, Wings of Resonant Life",11765832
+20,5,Tearlaments Havnis,37961969
+21,5,Tearlaments Havnis,37961969
+22,5,Tearlaments Scheiren,572850
+23,5,Tearlaments Rulkallos,84330567
+24,6,Tearlaments Sulliek,74920585
+25,6,Tearlaments Merrli,74078255
+26,6,Paleozoic Marrella,64765016
+27,6,Sea Monster of Theseus,96334243
+28,7,Elemental HERO Prisma,89312388
+29,7,Polymerization,24094653
+30,7,King of the Swamp,79109599
+31,7,Tearlaments Rulkallos,84330567
+32,8,Buzzsaw Shark,7150545
+33,8,Lantern Shark,70156946
+34,8,Whitefish Salvage,63509474
+35,8,Full Armored Black Ray Lancer,25853045
+36,9,Silent Angler,90303176
+37,9,Silent Sea Nettle,31059809
+38,9,Whitefish Salvage,63509474
+39,9,Valiant Shark Lancer,23672629
+40,10,Right-Hand Shark,11845050
+41,10,Left-Hand Shark,47840168
+42,10,White Sunfish,52596406
+43,10,Bahamut Shark,440556
+44,11,White Mirror,19885332
+45,11,Torrential Tribute,53582587
+46,11,Crystal Shark,98881700
+47,11,Bahamut Shark,440556
+48,12,Abyss Shark,61496006
+49,12,Buzzsaw Shark,7150545
+50,12,Crystal Shark,98881700
+51,12,Full Armored Black Ray Lancer,25853045
+52,13,Abyss Shark,61496006
+53,13,Buzzsaw Shark,7150545
+54,13,White Mirror,19885332
+55,13,Shark Fortress,50449881
+56,14,White Sunfish,52596406
+57,14,Silent Angler,90303176
+58,14,Buzzsaw Shark,7150545
+59,14,Number 4: Stealth Kragen,67557908
+60,15,A Hero Lives,8949584
+61,15,Destiny HERO - Malicious,9411399
+62,15,Destiny HERO - Malicious,9411399
+63,15,Number 58: Burner Visor,93108839
+64,16,Elemental HERO Stratos,40044918
+65,16,Destiny HERO - Plasma,83965310
+66,16,Fusion Destiny,52947044
+67,16,Masked HERO Dark Law,58481572
+68,17,Mask Change II,93600443
+69,17,Destiny HERO - Denier,16605586
+70,17,Destiny HERO - dark angel,26964762
+71,17,Destiny HERO - Destroyer Phoenix Enforcer,60461804
+72,18,Mask Change,21143940
+73,18,Elemental HERO Blazeman,63060238
+74,18,Elemental HERO Stratos,40044918
+75,18,Vision HERO Trinity,46759931
+76,19,Elemental HERO Liquid Soldier,59392529
+77,19,Elemental HERO Solid Soldier,45195443
+78,19,Miracle Fusion,45906428
+79,19,Elemental HERO Sunrise,22908820
+80,20,Deep Sea Diva,78868119
+81,20,Instant Contact,16169772
+82,20,Elemental HERO Neos,89943723
+83,20,Elemental HERO Absolute Zero,40854197
+84,21,Deep Sea Diva,78868119
+85,21,Paleozoic Dinomischus,38761908
+86,21,Swap Frog,9126351
+87,21,Number 37: Hope Woven Dragon Spider Shark,37279508
+88,22,Time Thief Adjuster,64730881
+89,22,Time Thief Winder,56308388
+90,22,Time Thief Startup,10877309
+91,22,Time Thief Double Barrel,91135480
+92,23,Herald of the Abyss,94016752
+93,23,Time Thief Hack,81670445
+94,23,Time Thief Power Reserve,42620460
+95,23,Time Thief Perpetua,59208943
+96,24,Time Thief Winder,56308388
+97,24,Time Thief Bezel Ship,82496097
+98,24,Time Thief Regulator,19891131
+99,24,Time Thief Redoer,55285840
+100,25,Time Thief Adjuster,64730881
+101,25,Time Thief Retrograde,76587747
+102,25,Time Thief Temporwhal,52083044
+103,25,Number 106: Giant Hand,63746411
+104,26,Time Thief Adjuster,64730881
+105,26,Time Thief Winder,56308388
+106,26,Time Thief Startup,10877309
+107,26,Daigusto Emeral,581014
+108,27,Clockwork Night,84797028
+109,27,Cyber Repair Plant,86686671
+110,27,Limiter Removal,23171610
+111,27,Chimeratech Fortress Dragon,79229522
+112,28,Cyber Dragon Core,23893227
+113,28,Infinite Impermanence,10045474
+114,28,Cyber Eternal,32768230
+115,28,Cyber Dragon Nova,58069384
+116,29,Cyber Emergency,60600126
+117,29,Cyberload Fusion,55704856
+118,29,Overload Fusion,3659803
+119,29,Chimeratech Megafleet Dragon,87116928
+120,30,Cyberdark Chimera,5370235
+121,30,Cyberload Fusion,55704856
+122,30,Cyber Dragon Nachster,1142880
+123,30,Cyber Eternity Dragon,82315403
+124,31,White Sunfish,52596406
+125,31,White Mirror,19885332
+126,31,Ice Dragon's Prison,20899496
+127,31,Number 32: Shark Drake,65676461
+128,32,Cyber Emergency,60600126
+129,32,Cyber Dragon,70095154
+130,32,Cyber Dragon Herz,56364287
+131,32,Cyber Dragon Infinity,10443957
+132,33,Cyberdark Chimera,5370235
+133,33,Cyberdark Keel,3019642
+134,33,Cyberdark Realm,64753988
+135,33,Cyber Twin Dragon,74157028
+136,34,Cyber Repair Plant,86686671
+137,34,Clockwork Night,84797028
+138,34,Overload Fusion,3659803
+139,34,Cyber Dragon Sieger,46724542
+140,35,Cyber Dragon Core,23893227
+141,35,Cyber Eternal,32768230
+142,35,Cyber Dragon Herz,56364287
+143,35,Chimeratech Rampage Dragon,84058253
+144,36,Time Thief Regulator,19891131
+145,36,Time Thief Power Reserve,42620460
+146,36,"Spell Card ""Monster Reborn""",28958464
+147,36,Dark Rebellion Xyz Dragon,16195942
+148,37,Melffy Wally,98416533
+149,37,Rescue Cat,14878871
+150,37,Obedience Schooled,72537897
+151,37,Number 64: Ronin Raccoon Sandayu,39972129
+152,38,Melffy Wally,98416533
+153,38,Deep Sea Diva,78868119
+154,38,"Kittytail, Mystical Beast of the Forest",64475743
+155,38,Gigantic Spright,54498517
+156,39,Melffy Puppy,20003027
+157,39,Melffy Catty,93018428
+158,39,Melffy Wally,98416533
+159,39,Sky Cavalry Centaurea,36776089
+160,40,"Valerifawn, Mystical Beast of the Forest",24096499
+161,40,"Kalantosa, Mystical Beast of the Forest",97317530
+162,40,Melffy Staring Contest,76981308
+163,40,Joyous Melffys,53054164
+164,41,Melffy Fenny,57523313
+165,41,Melffy Pony,56401775
+166,41,Melffy Pinny,34800281
+167,41,Melffy of the Forest,30439101
+168,42,Obedience Schooled,72537897
+169,42,White Steed of the Floral Knights,11426487
+170,42,White Steed of the Floral Knights,11426487
+171,42,Bujinki Ahashima,71095768
+172,43,Rescue Cat,14878871
+173,43,Melffy Hide-and-Seek,63644830
+174,43,Melffy Playhouse,82134632
+175,43,Toadally Awesome,90809975
+176,44,Reinforcement of the Army,32807846
+177,44,Tellarknight Lyran,79210531
+178,44,Stellarknight Alpha,81810441
+179,44,Stellarknight Delteros,56638325
+180,45,Reinforcement of the Army,32807846
+181,45,Satellarknight Unukalhai,1050186
+182,45,Stellarnova Alpha,41510920
+183,45,Tellarknight Constellar Caduceus,58858807
+184,46,Fluffal Dog,39246582
+185,46,Fluffal Dolphin,82896870
+186,46,Fluffal Penguin,13241004
+187,46,Number 103: Ragnazero,94380860
+188,47,Satellarknight Altair,2273734
+189,47,Satellarknight Deneb,75878039
+190,47,Satellarknight Vega,38667773
+191,47,Stellarknight Triverr,42589641
+192,48,constellar star chart,35631584
+193,48,Tellarknight Lyran,79210531
+194,48,Satellarknight Unukalhai,1050186
+195,48,Stellarknight Delteros,56638325
+196,49,constellar tellarknights,10125011
+197,49,Satellarknight Vega,38667773
+198,49,Stellarnova Alpha,41510920
+199,49,Tellarknight Ptolemaeus,18326736
+200,50,Toy Vendor,70245411
+201,50,Frightfur March,74416026
+202,50,Edge Imp Sabres,30068120
+203,50,Frightfur Wolf,11039171
+204,51,Fluffal Dolphin,82896870
+205,51,Fluffal Dog,39246582
+206,51,Edge Imp Saw,34688023
+207,51,Frightfur Leo,10383554
+208,52,Frightfur Jar,18138630
+209,52,Frightfur Patchwork,34773082
+210,52,Frightfur Fusion,6077601
+211,52,Frightfur Daredevil,91034681
+212,53,Fluffal Bear,3841833
+213,53,Patchwork Fluffal,81481818
+214,53,Edge Imp Scythe,29280589
+215,53,Frightfur Bear,85545073
+216,54,Fluffal Octopus,87246309
+217,54,Frightfur Patchwork,34773082
+218,54,Polymerization,24094653
+219,54,Frightfur Cruel Whale,78778375
+220,55,Toy Vendor,70245411
+221,55,Frightfur Fusion,6077601
+222,55,Edge Imp Chain,61173621
+223,55,Frightfur Tiger,464362
+224,56,Fluffal Dog,39246582
+225,56,Fluffal Angel,45215225
+226,56,Edge Imp Chain,61173621
+227,56,Dangerous Frightfur Nightmary,58468105
+228,57,Predaplant Ophrys Scorpio,35272499
+229,57,Predaplant Triantis,17825378
+230,57,Predaplant Spider Orchid,30537973
+231,57,Predaplant Ambulomelides,66309175
+232,58,Twin Twisters,43898403
+233,58,Predapractice,31643613
+234,58,Predaprime Fusion,8148322
+235,58,Predaplant Dragostapelia,69946549
+236,59,Predaplanning,44536921
+237,59,Predaplant Darlingtonia Cobra,61677004
+238,59,Predaplant Sarraceniant,53819028
+239,59,Predaplant Ambulomelides,66309175
+240,60,Hammer Shot,26412047
+241,60,Predaplant Triantis,17825378
+242,60,Predaplant Spider Orchid,30537973
+243,60,Predaplant Verte Anaconda,70369116
+244,61,Predaplant Darlingtonia Cobra,61677004
+245,61,Predaplant Ophrys Scorpio,35272499
+246,61,Predaplant Drosophyllum Hydra,99913726
+247,61,Predaplant Chimerafflesia,25586143
+248,62,Predaplant Banksiogre,22138839
+249,62,Predaplant Drosophyllum Hydra,99913726
+250,62,Predaplant Bufolicula,70427670
+251,62,Starving Venom Predapower Fusion Dragon,39915560
+252,63,Predaprime Fusion,8148322
+253,63,Predapractice,31643613
+254,63,Predaplant Byblisp,44932065
+255,63,Sylvan Dancepione,21903613
+256,64,Substitoad,20663556
+257,64,Substitoad,20663556
+258,64,Substitoad,20663556
+259,64,Abyss Keeper,82184400
+260,65,Dupe Frog,46239604
+261,65,Swap Frog,9126351
+262,65,Spright Blue,76145933
+263,65,Number 65: Djinn Buster,3790062
+264,66,Dupe Frog,46239604
+265,66,Swap Frog,9126351
+266,66,Spright Blue,76145933
+267,66,Downerd Magician,72167543
+268,67,One for One,2295440
+269,67,Spright Gamma Burst,42431833
+270,67,Lord of the Heavenly Prison,9822220
+271,67,Cat Shark,84224627
+272,68,Polymerization,24094653
+273,68,Elemental HERO Prisma,89312388
+274,68,Destiny HERO - Malicious,9411399
+275,68,Elemental HERO Escuridao,33574806
+276,69,Torrential Tribute,53582587
+277,69,Spright Blue,76145933
+278,69,Spright Jet,13533678
+279,69,Paleozoic Anomalocaris,61307542
+280,70,Paleozoic Canadia,98414735
+281,70,Paleozoic Olenoides,35035481
+282,70,Rise to Full Height,19254117
+283,70,Number 29: Mannequin Cat,54191698
+284,71,Paleozoic Canadia,98414735
+285,71,Paleozoic Marrella,64765016
+286,71,Rise to Full Height,19254117
+287,71,Paleozoic Opabinia,37649320
+288,72,Frightfur Patchwork,34773082
+289,72,Fluffal Owl,65331686
+290,72,Edge Imp Sabres,30068120
+291,72,Frightfur Kraken,40636712
+292,73,Polymerization,24094653
+293,73,Super Polymerization,48130397
+294,73,Heavy Polymerization,58570206
+295,73,Guardian Chimera,11321089
+296,74,Traptrix Holeutea,74577599
+297,74,Floodgate Trap Hole,69599136
+298,74,Bottomless Trap Hole,29401950
+299,74,Traptrix Rafflesia,6511113
