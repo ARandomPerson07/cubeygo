@@ -145,7 +145,7 @@ async def choose(ctx : commands.Context, choice : str):
                     session.endCurrentRound()
                     for player in session.players:
                         await player.dm_channel.send(f"Round complete\nPlease check back with the server's channel.\nHere's what you have so far:", embed = get_cards_from_hands(session.playerHands[player], False))
-                        if session.state == sessionStates.FIRSTROUNDEND:
+                        if session.state == sessionStates.THIRDROUNDEND:
                             #print(generate_ydk_from_hands(session.playerHands[player]))
                             await player.dm_channel.send(f"Here's a ydk with your choices:\n ```\n{generate_ydk_from_hands(session.playerHands[player])}```")
 
